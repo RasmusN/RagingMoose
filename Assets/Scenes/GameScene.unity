@@ -1076,6 +1076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284870759}
   - component: {fileID: 1284870760}
+  - component: {fileID: 1284870761}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -1111,6 +1112,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938c9306a3f557a4aa3b3dc9b442b7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1284870761
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284870758}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1531040015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1226,7 @@ GameObject:
   - component: {fileID: 1548651790}
   - component: {fileID: 1548651792}
   - component: {fileID: 1548651791}
+  - component: {fileID: 1548651793}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -1307,6 +1330,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1548651793
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548651789}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1802419875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,3 +1541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f6ce10d7115b94db47e0ff3c9e75ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 10
+  FlipOnY: -1
+  TopPosition: 1
