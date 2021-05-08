@@ -8,6 +8,8 @@ public class ChangeScene : MonoBehaviour
     public void menuScene()
     {
         SceneManager.LoadScene(0);
+        PlayerInfo pl;
+        
     }
     public void gameScene()
     {

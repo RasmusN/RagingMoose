@@ -5,7 +5,14 @@ using UnityEngine;
 // use FindObjectOfType<PlayerInfo>() in Start() of every object that needs this
 public class PlayerInfo : MonoBehaviour
 {
-    int Hp;
-    int Score;
-    float Speed;
+    public int Hp;
+    public int Score;
+    public float Speed;
+
+    public void Start()
+    {
+        Hp = 2;
+        Score = 0;
+        Speed = 10;
+    }
 }
