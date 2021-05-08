@@ -848,6 +848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e963a4d21952647b9cd5a84fcea086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Hp: 0
+  Score: 0
+  Speed: 0
 --- !u!4 &967605899
 Transform:
   m_ObjectHideFlags: 0
@@ -1097,7 +1100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 7c92d39f17c84c647a088b412f2450b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1195,6 +1198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddb45f3f4c3e91488b6da8838e1b313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PedestrianHitScore: 150
+  HpLostOnHitStone: 1
+  PlayerInfo: {fileID: 967605897}
 --- !u!50 &1284870763
 Rigidbody2D:
   serializedVersion: 4
