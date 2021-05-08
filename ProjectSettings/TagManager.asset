@@ -8,6 +8,7 @@ TagManager:
   - Standing Pedestrian
   - Obstacle
   - Forest
+  - Wall
   layers:
   - Default
   - TransparentFX
