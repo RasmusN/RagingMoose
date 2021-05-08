@@ -14,10 +14,12 @@ public class CollisionHandler : MonoBehaviour{
         if(other.tag.Equals("Standing Pedestrian")){
             Debug.Log("Hit a Standing Pedestrian");
             playerInfo.Score += PedestrianHitScore; 
-
         } else if(other.tag.Equals("Obstacle")){
             Debug.Log("Hit an obstacle");
             playerInfo.Hp -= HpLostOnHitObstacle;
+        } else if(other.tag.Equals("Wall")){
+            Debug.Log("Hit the wall");
+            playerInfo.Hp = 0;
         }
         else{
             Debug.Log($"Hit an unknown object TAG #{other.tag}");

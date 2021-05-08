@@ -19,7 +19,6 @@ public class Scroller : MonoBehaviour
         if(gameObject.transform.position.y < FlipOnY){
             // Remove all Pedestrians and obstacles
             destroyAllObstacles();    
-            destroyAllPedestrians();
             
             // Move the background to the top position
             gameObject.transform.position = new Vector3(0f, TopPosition, 0f);
@@ -53,11 +52,6 @@ public class Scroller : MonoBehaviour
     }
     private void destroyAllObstacles(){
         foreach (Transform child in Obstacles.transform) {
-            GameObject.Destroy(child.gameObject);
-        }
-    }
-    private void destroyAllPedestrians(){
-        foreach (Transform child in Pedestrians.transform) {
             GameObject.Destroy(child.gameObject);
         }
     }
