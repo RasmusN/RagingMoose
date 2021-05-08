@@ -10,6 +10,16 @@ public class CollisionHandler : MonoBehaviour{
     void Start(){
         playerInfo = PlayerInfo.GetComponent<PlayerInfo>();
     }
+    // private void OnTriggerStay(Collider2D other){
+    //     if(other.tag.Equals("Forest")){
+    //         playerInfo.Speed = 4;
+    //     }
+    // }
+    private void OnTriggerExit2D(Collider2D other){
+        if(other.tag.Equals("Forest")){
+           playerInfo.Speed = playerInfo.DefaultRoadSpeed; 
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag.Equals("Standing Pedestrian")){
             Debug.Log("Hit a Standing Pedestrian");
@@ -20,7 +30,10 @@ public class CollisionHandler : MonoBehaviour{
         } else if(other.tag.Equals("Wall")){
             Debug.Log("Hit the wall");
             playerInfo.Hp = 0;
+        } else if (other.tag.Equals("Forest")){
+            playerInfo.Speed = playerInfo.DefaultOffRoadSpeed;
         }
+
         else{
             Debug.Log($"Hit an unknown object TAG #{other.tag}");
         }

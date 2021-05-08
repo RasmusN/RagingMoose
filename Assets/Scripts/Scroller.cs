@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Scroller : MonoBehaviour
 {
-    public float Speed;
+    // public float Speed;
     public float FlipOnY;
     public float TopPosition;
+    public GameObject PlayerInfo;
     public GameObject Obstacles;
     public GameObject Pedestrians;
     public GameObject Stone;
@@ -14,8 +15,12 @@ public class Scroller : MonoBehaviour
     public GameObject PotHole7;
     public GameObject PotHole8;
     public Sprite[] pedestrianSprites;
+    private PlayerInfo playerInfo;
+    void Start(){
+        playerInfo = PlayerInfo.GetComponent<PlayerInfo>();
+    }
     void Update(){
-        gameObject.transform.position -= new Vector3(0f, Speed, 0f) * Time.deltaTime;
+        gameObject.transform.position -= new Vector3(0f, playerInfo.Speed, 0f) * Time.deltaTime;
         if(gameObject.transform.position.y < FlipOnY){
             // Remove all Pedestrians and obstacles
             destroyAllObstacles();    
