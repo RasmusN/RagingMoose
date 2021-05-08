@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour{
     public int PedestrianHitScore = 150;
-    public int HpLostOnHitStone = 1;
+    public int HpLostOnHitObstacle = 1;
     public GameObject PlayerInfo;
     private PlayerInfo playerInfo;
     void Start(){
@@ -15,9 +15,9 @@ public class CollisionHandler : MonoBehaviour{
             Debug.Log("Hit a Standing Pedestrian");
             playerInfo.Score += PedestrianHitScore; 
 
-        } else if(other.tag.Equals("Stone")){
-            Debug.Log("Hit a Stone");
-            playerInfo.Hp -= HpLostOnHitStone;
+        } else if(other.tag.Equals("Obstacle")){
+            Debug.Log("Hit an obstacle");
+            playerInfo.Hp -= HpLostOnHitObstacle;
         }
         else{
             Debug.Log($"Hit an unknown object TAG #{other.tag}");
