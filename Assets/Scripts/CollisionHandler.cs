@@ -10,11 +10,11 @@ public class CollisionHandler : MonoBehaviour{
     void Start(){
         playerInfo = PlayerInfo.GetComponent<PlayerInfo>();
     }
-    // private void OnTriggerStay(Collider2D other){
-    //     if(other.tag.Equals("Forest")){
-    //         playerInfo.Speed = 4;
-    //     }
-    // }
+    private void OnTriggerStay2D(Collider2D other){
+        if(other.tag.Equals("Forest")){
+            playerInfo.Score -= 1;
+        }
+    }
     private void OnTriggerExit2D(Collider2D other){
         if(other.tag.Equals("Forest")){
            playerInfo.Speed = playerInfo.DefaultRoadSpeed; 

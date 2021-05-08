@@ -1432,6 +1432,8 @@ MonoBehaviour:
   Hp: 100
   Score: 0
   Speed: 7
+  DefaultRoadSpeed: 7
+  DefaultOffRoadSpeed: 2
 --- !u!4 &967605899
 Transform:
   m_ObjectHideFlags: 0
@@ -2811,7 +2813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f6ce10d7115b94db47e0ff3c9e75ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
   FlipOnY: -11
   TopPosition: 11
   PlayerInfo: {fileID: 967605897}
