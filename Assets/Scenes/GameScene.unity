@@ -2590,6 +2590,25 @@ MonoBehaviour:
   StandingPedestrian: {fileID: 5302622977963574925, guid: 24247cfbdcddb004d831dff857e45802, type: 3}
   PotHole7: {fileID: 3754041268480362282, guid: a3fd723f66fa3a645933c3c8011e245d, type: 3}
   PotHole8: {fileID: 7286199068191578103, guid: 96c61f2d921af0d4c93c3e3e3f5b3f75, type: 3}
+  pedestrianSprites:
+  - {fileID: 1876127960655748969, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 6707860294531583577, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 4036712912719648, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 2305722623274369022, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: -857308951535673053, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: -551701570962568903, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 6257195774745256823, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 5681674713217658454, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: -8242432167301896176, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 4404846588161858408, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: -2541964212188659931, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 8098307009066744579, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 1043311038369908298, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 194027128401219464, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: -7539775193415603661, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 5779594729946649296, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: -6808855845398338796, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
+  - {fileID: 8794621611125951460, guid: b5a0e5bfc19ef2e4299ba010eb58e7e3, type: 3}
 --- !u!1001 &633789102766932534
 PrefabInstance:
   m_ObjectHideFlags: 0
