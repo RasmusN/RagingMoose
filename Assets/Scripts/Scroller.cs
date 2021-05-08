@@ -41,7 +41,7 @@ public class Scroller : MonoBehaviour
             float xPos = Random.Range(minXPos, maxXPos);
             GameObject entity = getRandomEntity();
             if(entity.tag == "Standing Pedestrian"){
-                entity.GetComponent<SpriteRenderer>().sprite = pedestrianSprites[Random.Range(0, pedestrianSprites.Length)];
+                entity.GetComponent<SpriteRenderer>().sprite = pedestrianSprites[Random.Range(0, pedestrianSprites.Length-1)];
             }
             Instantiate(entity, new Vector3(xPos, yPos, 0f), Quaternion.identity, Obstacles.transform);
         }
