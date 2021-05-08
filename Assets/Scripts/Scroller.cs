@@ -21,6 +21,7 @@ public class Scroller : MonoBehaviour
     }
     void Update(){
         gameObject.transform.position -= new Vector3(0f, playerInfo.Speed, 0f) * Time.deltaTime;
+        playerInfo.DistanceLeft -= 0.5f*playerInfo.Speed*Time.deltaTime;
         if(gameObject.transform.position.y < FlipOnY){
             // Remove all Pedestrians and obstacles
             destroyAllObstacles();    

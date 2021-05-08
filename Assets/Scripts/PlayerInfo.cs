@@ -7,6 +7,7 @@ public class PlayerInfo : MonoBehaviour
 {
     public int Hp;
     public int Score;
+    public float DistanceLeft;
     public float Speed;
     public float DefaultRoadSpeed;
     public float DefaultOffRoadSpeed;
