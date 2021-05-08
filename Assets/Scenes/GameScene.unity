@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hp: 100
   Score: 0
-  DistanceLeft: 340
+  _distanceLeft: 340
   Speed: 7
   DefaultRoadSpeed: 7
   DefaultOffRoadSpeed: 2
