@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938c9306a3f557a4aa3b3dc9b442b7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SteeringVelocity: 1
+  SteeringVelocity: 5
 --- !u!61 &1284870761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1451,8 +1451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  FlipOnY: -10
-  TopPosition: 10
+  FlipOnY: -11
+  TopPosition: 11
 --- !u!1001 &1911524358293363596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1530,7 +1530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3754041268480362281, guid: a3fd723f66fa3a645933c3c8011e245d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.89
+      value: 3.23
       objectReference: {fileID: 0}
     - target: {fileID: 3754041268480362281, guid: a3fd723f66fa3a645933c3c8011e245d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1631,7 +1631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5365535977646800838, guid: 96c61f2d921af0d4c93c3e3e3f5b3f75, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 5365535977646800838, guid: 96c61f2d921af0d4c93c3e3e3f5b3f75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1649,6 +1649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot Hole 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7286199068191578103, guid: 96c61f2d921af0d4c93c3e3e3f5b3f75, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c61f2d921af0d4c93c3e3e3f5b3f75, type: 3}
 --- !u!224 &3359142036110892197 stripped
@@ -1663,6 +1667,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1975666051}
     m_Modifications:
+    - target: {fileID: 6062495714679769647, guid: ee06e400b93c937469b7f8b42b14cb69, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6062495714679769649, guid: ee06e400b93c937469b7f8b42b14cb69, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1733,7 +1741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6062495714679769649, guid: ee06e400b93c937469b7f8b42b14cb69, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.37
+      value: 6.41
       objectReference: {fileID: 0}
     - target: {fileID: 6062495714679769649, guid: ee06e400b93c937469b7f8b42b14cb69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1752,6 +1760,10 @@ PrefabInstance:
       value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6062495714679769650, guid: ee06e400b93c937469b7f8b42b14cb69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062495714679769650, guid: ee06e400b93c937469b7f8b42b14cb69, type: 3}
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
@@ -1764,9 +1776,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1975666051}
     m_Modifications:
+    - target: {fileID: 3111726201845378017, guid: 36621162d254be141b23b5b868943894, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3111726201845378044, guid: 36621162d254be141b23b5b868943894, type: 3}
       propertyPath: m_Name
       value: Standing Pedestrian
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111726201845378044, guid: 36621162d254be141b23b5b868943894, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3111726201845378047, guid: 36621162d254be141b23b5b868943894, type: 3}
       propertyPath: m_Pivot.x
@@ -1834,11 +1854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3111726201845378047, guid: 36621162d254be141b23b5b868943894, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.9
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 3111726201845378047, guid: 36621162d254be141b23b5b868943894, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.8
+      value: 2.32
       objectReference: {fileID: 0}
     - target: {fileID: 3111726201845378047, guid: 36621162d254be141b23b5b868943894, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
