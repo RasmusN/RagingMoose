@@ -23,7 +23,7 @@ public class Scroller : MonoBehaviour
             // Move the background to the top position
             gameObject.transform.position = new Vector3(0f, TopPosition, 0f);
            
-            // Spawn new Pedestrian and obstacles
+            // Spawn new Pedestrians and obstacles
             spawnObstaclesAndPedestrians();
         }
     }
@@ -33,9 +33,18 @@ public class Scroller : MonoBehaviour
         float maxYPos = 4.0f+11f;
         float minXPos = -1.2f;
         float maxXPos = 1.2f;
+        float ySpacing = (maxYPos-minYPos)/3f;
 
-        Instantiate(PotHole7, new Vector3(minXPos, minYPos, 0f), Quaternion.identity, Obstacles.transform);
-        Instantiate(PotHole8, new Vector3(maxXPos, maxYPos, 0f), Quaternion.identity, Obstacles.transform);
+        for(int i=0; i<4;i++){
+            float yPos = minYPos + i*ySpacing;
+            float xPos = Random.Range(minXPos, maxXPos);
+            GameObject entity = getRandomEntity();
+            Instantiate(entity, new Vector3(xPos, yPos, 0f), Quaternion.identity, Obstacles.transform);
+        }
+    }
+    private GameObject getRandomEntity(){
+        var objectArray = new GameObject[]{Stone, StandingPedestrian, PotHole7, PotHole8};
+        return objectArray[Random.Range(0, objectArray.Length-1)];
     }
     private void destroyAllObstacles(){
         foreach (Transform child in Obstacles.transform) {
