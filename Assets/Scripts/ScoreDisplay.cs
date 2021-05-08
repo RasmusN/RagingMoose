@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    float Score = 0;
     public Text ScoreText;
+    PlayerInfo playerInfo;
 
+    void Start()
+    {
+        playerInfo = PlayerInfo.FindObjectOfType<PlayerInfo>();
+    }
     // Update is called once per frame
     void Update()
     {
-        ScoreText.text = "" + Score;
+        ScoreText.text = "" + playerInfo.Score;
     }
 }
