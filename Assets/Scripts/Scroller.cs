@@ -11,7 +11,6 @@ public class Scroller : MonoBehaviour
     public float SpeedTransitionMultiplier;
     public GameObject PlayerInfo;
     public GameObject Obstacles;
-    public GameObject Pedestrians;
     public GameObject Stone;
     public GameObject StandingPedestrian;
     public GameObject PotHole7;
@@ -47,15 +46,17 @@ public class Scroller : MonoBehaviour
 
     private void spawnObstaclesAndPedestrians(){
         float minYPos = -5.0f+11f;
-        float maxYPos = 4.0f+11f;
+        float maxYPos = 30.0f+11f;
         float minXPos = -1.2f;
         float maxXPos = 1.2f;
-        float ySpacing = (maxYPos-minYPos)/3f;
+        int obsticlesPerLoop = 6;
+        float ySpacing = (maxYPos-minYPos)/obsticlesPerLoop;
 
-        for(int i=0; i<4;i++){
+        for(int i=0; i<obsticlesPerLoop;i++){
             float yPos = minYPos + i*ySpacing;
             float xPos = Random.Range(minXPos, maxXPos);
             GameObject entity = getRandomEntity();
+            Debug.Log($"Spawning #{i} {entity.tag} at y = {yPos}");
             if(entity.tag == "Standing Pedestrian"){
                 entity.GetComponent<SpriteRenderer>().sprite = pedestrianSprites[Random.Range(0, pedestrianSprites.Length)];
             }
@@ -63,7 +64,7 @@ public class Scroller : MonoBehaviour
         }
     }
     private GameObject getRandomEntity(){
-        var objectArray = new GameObject[]{Stone, StandingPedestrian, PotHole7, PotHole8};
+        var objectArray = new GameObject[]{StandingPedestrian, PotHole7, PotHole8};
         int randomIndex = Random.Range(0, objectArray.Length);
         return objectArray[randomIndex];
     }
