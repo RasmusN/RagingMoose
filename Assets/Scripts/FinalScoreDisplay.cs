@@ -24,6 +24,7 @@ public class FinalScoreDisplay : MonoBehaviour
         {
             scoreText.text = "Final Score: " + 0;
             distanceText.text = "Distance: " + 0;
+            return;
         }
         scoreText.text = "Final Score: " + playerInfo.Score;
         distanceText.text = "Distance: " + playerInfo._distanceLeft;
