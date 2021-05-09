@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class SFXObjectCollision : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        AudioSource audioData;
+    public AudioSource audioSrc;
+    public AudioClip[] soundList;
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.tag.Equals("Player"))
         {
-            audioData = GetComponent<AudioSource>();
-            audioData.Play();
-        }
-        else
-        {
-            Debug.Log($"Hit an unknown object TAG #{other.tag}");
+            // could make it so it doesn't play new moose sound until last one has finished
+            if (soundList.Length == 0) return;
+            // choose random sound from list (int)
+            int randomInt = Random.Range(0, soundList.Length - 1);
+
+            // set that sound to source
+            audioSrc.clip = soundList[randomInt];
+
+            // play
+            audioSrc.Play();
         }
     }
 }

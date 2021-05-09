@@ -2602,8 +2602,8 @@ GameObject:
   - component: {fileID: 1284870762}
   - component: {fileID: 1284870763}
   - component: {fileID: 1284870764}
-  - component: {fileID: 1284870766}
   - component: {fileID: 1284870765}
+  - component: {fileID: 1284870766}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Player
@@ -2714,7 +2714,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8f7218609145f0e48aef6763c3d41250, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.64
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2830,7 +2830,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

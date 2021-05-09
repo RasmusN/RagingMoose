@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5365535977646800838}
   - component: {fileID: 3646307962493753486}
   - component: {fileID: 2677372011104054725}
+  - component: {fileID: 8869936571500868597}
   - component: {fileID: -4990541194083181423}
-  - component: {fileID: -693189029006392833}
   m_Layer: 0
   m_Name: Pot Hole 8
   m_TagString: Obstacle
@@ -116,6 +116,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.2566962, y: 1.0466594}
   m_EdgeRadius: 0
+--- !u!114 &8869936571500868597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286199068191578103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976ef2ce7a5cbd44c9d812c2da2c0f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSrc: {fileID: -4990541194083181423}
+  soundList:
+  - {fileID: 8300000, guid: 7280ca8caef98514b9830bd4e626fab3, type: 3}
+  - {fileID: 8300000, guid: c32c861033dc043409db21ef21130f01, type: 3}
+  - {fileID: 8300000, guid: 0b84d98436c05a348ba29aa269b09d01, type: 3}
+  - {fileID: 8300000, guid: a96bedd738c407c42b8f2e6100122321, type: 3}
 --- !u!82 &-4990541194083181423
 AudioSource:
   m_ObjectHideFlags: 0
@@ -126,9 +144,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 41b7bcd4783053a47bfd26635d8f8740, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -212,15 +230,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-693189029006392833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7286199068191578103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b8bbb9160dfce4a822f23fe94b6219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
