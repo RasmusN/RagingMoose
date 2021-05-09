@@ -19,6 +19,6 @@ public class SFXForestCollision : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        audioData.Stop();
+        audioData?.Stop();
     }
 }
