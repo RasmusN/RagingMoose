@@ -9,6 +9,7 @@ public class Scroller : MonoBehaviour
     public float TopPosition;
     public float SpeedTransitionAtDistanceLeft;
     public float SpeedTransitionMultiplier;
+    public float SpeedTransitionZone;
     public GameObject PlayerInfo;
     public GameObject Obstacles;
     public GameObject Stone;
@@ -23,8 +24,11 @@ public class Scroller : MonoBehaviour
     private float getSpeed(){
         if(playerInfo.DistanceLeft > SpeedTransitionAtDistanceLeft){
             return playerInfo.Speed;
-        } else {
-            return playerInfo.Speed*SpeedTransitionMultiplier;
+        } else{
+            float highSpeed =  playerInfo.Speed*SpeedTransitionMultiplier;
+            float slope = -(playerInfo.Speed-highSpeed)/SpeedTransitionZone;
+            float transitionSpeed = playerInfo.Speed + slope*(SpeedTransitionAtDistanceLeft-playerInfo.DistanceLeft);
+            return System.Math.Min(highSpeed, transitionSpeed);
         }
     }
     void Update(){

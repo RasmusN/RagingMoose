@@ -3611,8 +3611,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FlipOnY: -34.28764
   TopPosition: 11
-  SpeedTransitionAtDistanceLeft: 80
+  SpeedTransitionAtDistanceLeft: 120
   SpeedTransitionMultiplier: 1.4
+  SpeedTransitionZone: 30
   PlayerInfo: {fileID: 967605897}
   Obstacles: {fileID: 1314102049}
   Stone: {fileID: 6062495714679769650, guid: ee06e400b93c937469b7f8b42b14cb69, type: 3}
