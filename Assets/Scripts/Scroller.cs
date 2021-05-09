@@ -30,7 +30,9 @@ public class Scroller : MonoBehaviour
             gameObject.transform.position = new Vector3(0f, TopPosition, 0f);
            
             // Spawn new Pedestrians and obstacles
-            spawnObstaclesAndPedestrians();
+            if(playerInfo.DistanceLeft > 5){
+                spawnObstaclesAndPedestrians();
+            }
         }
     }
 
