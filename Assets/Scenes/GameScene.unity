@@ -1679,7 +1679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e963a4d21952647b9cd5a84fcea086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  Hp: 5
   Score: 0
   _distanceLeft: 340
   Speed: 7
