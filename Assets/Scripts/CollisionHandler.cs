@@ -32,6 +32,7 @@ public class CollisionHandler : MonoBehaviour{
             float leftOrRight = Math.Sign(other.transform.position.x);
             other.GetComponent<Rigidbody2D>().velocity = new Vector3(leftOrRight*5f, 2f, 0f);
             other.GetComponent<Rigidbody2D>().angularVelocity = 720f;
+            Destroy(other.transform.gameObject, 5f);
         } else if(other.tag.Equals("Obstacle")){
             Debug.Log("Hit an obstacle");
             playerInfo.Hp -= HpLostOnHitObstacle;

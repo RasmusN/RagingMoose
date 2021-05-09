@@ -7,6 +7,8 @@ public class Scroller : MonoBehaviour
     // public float Speed;
     public float FlipOnY;
     public float TopPosition;
+    public float SpeedTransitionAtDistanceLeft;
+    public float SpeedTransitionMultiplier;
     public GameObject PlayerInfo;
     public GameObject Obstacles;
     public GameObject Pedestrians;
@@ -19,8 +21,15 @@ public class Scroller : MonoBehaviour
     void Start(){
         playerInfo = PlayerInfo.GetComponent<PlayerInfo>();
     }
+    private float getSpeed(){
+        if(playerInfo.DistanceLeft > SpeedTransitionAtDistanceLeft){
+            return playerInfo.Speed;
+        } else {
+            return playerInfo.Speed*SpeedTransitionMultiplier;
+        }
+    }
     void Update(){
-        gameObject.transform.position -= new Vector3(0f, playerInfo.Speed, 0f) * Time.deltaTime;
+        gameObject.transform.position -= new Vector3(0f, getSpeed(), 0f) * Time.deltaTime;
         playerInfo.DistanceLeft -= 0.5f*playerInfo.Speed*Time.deltaTime;
         if(gameObject.transform.position.y < FlipOnY){
             // Remove all Pedestrians and obstacles
