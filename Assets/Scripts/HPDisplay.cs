@@ -20,6 +20,7 @@ public class HPDisplay : MonoBehaviour
         {
             HPText.text = "" + 0;
             SceneManager.LoadScene(2);
+            DontDestroyOnLoad(playerInfo);
         }
         else
         {
