@@ -18,6 +18,7 @@ public class DistanceLeftDisplay : MonoBehaviour
     {
         if(playerInfo._distanceLeft <= 0)
         {
+            DontDestroyOnLoad(playerInfo);
             SceneManager.LoadScene(2);
         }
         DistanceLeftText.text = string.Format("{0:0}", playerInfo.DistanceLeft) + " km";
