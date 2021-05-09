@@ -19,8 +19,8 @@ public class HPDisplay : MonoBehaviour
         if(playerInfo.Hp <= 0)
         {
             HPText.text = "" + 0;
-            SceneManager.LoadScene(2);
             DontDestroyOnLoad(playerInfo);
+            SceneManager.LoadScene(2);
         }
         else
         {
