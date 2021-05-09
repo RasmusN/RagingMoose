@@ -7,6 +7,7 @@ public class ButtonBehaviour : MonoBehaviour
 {
     public Button btn;
     public AudioSource audioSrc;
+    public GameObject HowToPlay;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +17,12 @@ public class ButtonBehaviour : MonoBehaviour
     void taskOnClick()
     {
         audioSrc.Play();
+        if(gameObject.tag == "howtoplay"){
+            if(HowToPlay.activeSelf){
+                HowToPlay.SetActive(false);
+            } else {
+                HowToPlay.SetActive(true);
+            }
+        }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Forest
   - Wall
+  - howtoplay
   layers:
   - Default
   - TransparentFX
