@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DistanceLeftDisplay : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class DistanceLeftDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(playerInfo._distanceLeft <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
         DistanceLeftText.text = string.Format("{0:0}", playerInfo.DistanceLeft) + " km";
         // DistanceLeftText.text = $"{playerInfo.DistanceLeft} km";
     }
