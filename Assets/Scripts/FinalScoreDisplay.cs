@@ -28,7 +28,7 @@ public class FinalScoreDisplay : MonoBehaviour
         // get score text and distance text
         scoreText = transform.Find("Scoreboard").Find("FinalScoreTxt").GetComponent<Text>();
         distanceText = transform.Find("Scoreboard").Find("DistanceTxt").GetComponent<Text>();
-        pedestriansTxt = transform.Find("Scoreboard").Find("Pedestrians").GetComponent<Text>();
+        //pedestriansTxt = transform.Find("Scoreboard").Find("Pedestrians").GetComponent<Text>();
         healthTxt = transform.Find("Scoreboard").Find("Health").GetComponent<Text>();
         // get button image
         tryAgainImage = transform.Find("Button").GetComponent<Image>();
@@ -55,9 +55,10 @@ public class FinalScoreDisplay : MonoBehaviour
         }
         else
         {
-            distanceText.text = "Distance left to Kiruna: " + playerInfo._distanceLeft;
+
+            distanceText.text = "Distance left: " + string.Format("{0:0}", playerInfo.DistanceLeft) + " km";
         }
-        pedestriansTxt.text = "Pedestrians: " + playerInfo._distanceLeft;
+        //pedestriansTxt.text = "Pedestrians: " + playerInfo._distanceLeft;
         healthTxt.text = "Health: " + playerInfo.Hp;
         scoreText.text = "Final Score: " + playerInfo.Score;
 
@@ -86,12 +87,13 @@ public class FinalScoreDisplay : MonoBehaviour
         {
             rightColor.color = rightWinColor;
             leftColor.color = leftWinColor;
-            audioSrc.clip = loseMusic;
         }
         else
         {
             rightColor.color = loseColor;
             leftColor.color = loseColor;
+            audioSrc.clip = loseMusic;
+            audioSrc.Play();
         }
         
 
